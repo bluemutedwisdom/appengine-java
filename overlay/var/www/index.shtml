@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <meta http-equiv="Content-Script-Type" content="text/javascript">
+
+        <title>TurnKey AppEngine (Java)</title>
+        
+        <link rel="stylesheet" href="css/ui.tabs.css" type="text/css" media="print, projection, screen">
+        <link rel="stylesheet" href="css/base.css" type="text/css">
+
+        <script src="js/jquery-1.2.6.js" type="text/javascript"></script>
+        <script src="js/ui.core.js" type="text/javascript"></script>
+        <script src="js/ui.tabs.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#container-1 > ul').tabs({ fx: { opacity: 'toggle'} });
+            });
+        </script>
+    </head>
+
+    <body>
+        <h1>TurnKey AppEngine (Java)</h1>
+        
+        <div id="container-1">
+            <ul>
+                <li><a href="#cp"><span>Control Panel</span></a></li>
+                <li><a href="#gae"><span>AppEngine</span></a></li>
+                <li><a href="#gwt"><span>GWT</span></a></li>
+            </ul>
+
+            <div id="cp">
+                <div class="fragment-content">
+                    <div>
+                        <a href="https://<!--#echo var="HTTP_HOST"-->:12320">
+                        <img src="images/shell.png"/>Web Shell</a>
+                    </div>
+                    <div>
+                        <a href="https://<!--#echo var="HTTP_HOST"-->:12321">
+                        <img src="images/webmin.png"/>Webmin</a>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <h2>Resources and references</h2>
+                    <ul>
+                        <li><a href="docs/appengine/docs/whatisgoogleappengine.html">What is Google AppEngine?</a> <a href="docs/appengine/whyappengine.html">Why should I use it?</a></li>
+                        <li><a href="docs/appengine/kb/index.html">Check out the FAQ</a>, <a href="docs/appengine/casestudies.html">case studies</a> and <a href="docs/appengine/articles/index.html">articles</a></li>
+
+                        <li><a href="http://www.turnkeylinux.org/appengine-java">TurnKey AppEngine Java release notes</a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div id="gae">
+                <div class="fragment-content">
+
+                <div class="icon"><img src="/images/youtube.png"/></div><br/>
+                <p><a href="http://www.youtube.com/watch?v=P3GT4-m_6RQ">Early Look at Java Language Support in Google AppEngine</a></p>
+                <p><a href="http://www.youtube.com/watch?v=2jW2iSKDipY">Google I/O 2009 - Java Persistence and App Engine Datastore</a></p>
+                
+                <p><b>Local documentation:</b>
+                <a href="docs/appengine/docs/java/gettingstarted/index.html">Getting started</a>, <a href="docs/appengine/docs/java/overview.html">AppEngine Java overview</a>, <a href="google_appengine/docs/javadoc/index.html">Java classes</a></p>
+
+<h2>Demo applications</h2>
+
+<ul>
+    <li>Log into the appliance via SSH or the 
+        <a href="https://<!--#echo var="HTTP_HOST"-->:12320">Web Shell</a></li>
+
+    <li>Change into the specified directory, build the application and
+    launch the development server</li>
+
+    <li>Browse to the 
+    <a href="http://<!--#echo var="HTTP_HOST"-->:8080">application</a> and its
+    <a href="http://<!--#echo var="HTTP_HOST"-->:8080/_ah/admin">
+    administrative console</a></li>
+</ul>
+
+<h3>Guestbook demo</h3>
+<pre>
+cd /var/www/google_appengine
+./bin/dev_appserver.sh -a 0.0.0.0 -p 8080 demos/guestbook/war
+</pre>
+
+<h3>Sticky demo (nice!)</h3>
+<pre>
+cd /var/www/google_appengine/demos/sticky
+ant
+
+cd /var/www/google_appengine
+./bin/dev_appserver.sh -a 0.0.0.0 -p 8080 demos/sticky/war
+</pre>
+
+<h3>HelloXMPP demo</h3>
+<pre>
+cd /var/www/google_appengine/demos/helloxmpp
+ant
+
+cd /var/www/google_appengine
+./bin/dev_appserver.sh -a 0.0.0.0 -p 8080 demos/helloxmpp/war
+</pre>
+Messages are sent from the
+<a href="http://<!--#echo var="HTTP_HOST"-->:8080/_ah/admin/xmpp">
+xmpp admin console</a>, and will appear in the server log
+
+                </div>
+            </div>
+
+            <div id="gwt">
+                <div class="fragment-content">
+
+                <div class="icon"><img src="/images/gwt.png"/></div>
+                <br/><h2>Google Web Toolkit</h2><br/>
+
+                <h3>Online Resources</h3>
+                <ul>
+                    <li>
+                        <a href="http://code.google.com/webtoolkit/">Homepage</a>,
+                        <a href="http://googlewebtoolkit.blogspot.com/">Blog</a>,
+                        <a href="http://code.google.com/docreader/?p=google-web-toolkit-doc-1-6&s=google-web-toolkit-doc-1-6&t=FAQ">FAQ</a>,
+                        <a href="http://groups.google.com/group/Google-Web-Toolkit">
+                        Developer forum</a>
+                    </li>
+                </ul>
+
+                <h3>Samples</h3>
+                <ul>
+                    <li><a href="google_appengine/demos/gwt/samples/Hello/war/Hello.html">Hello World</a>: The simplest application you can write with GWT.</li>
+                    <li><a href="google_appengine/demos/gwt/samples/Showcase/war/Showcase.html">Showcase</a>: Complex UI illustrating Widgets in action.</li>
+                    <li><a href="google_appengine/demos/gwt/samples/Mail/war/Mail.html">Mail</a>: Look and feel similar to a traditional desktop application.</li>
+                    <li><a href="google_appengine/demos/gwt/samples/JSON/war/JSON.html">JSON</a>: Interoperation with a JSON service.</li>
+                </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
