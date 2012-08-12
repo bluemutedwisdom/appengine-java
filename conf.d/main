@@ -21,14 +21,12 @@ ln -s gwt-* gwt
 cd -
 
 # preconfigure demos build.properties
-
 for d in $(ls $GAE_JAVA/demos); do
 cat >$GAE_JAVA/demos/$d/build.properties<<EOF
 gwt.sdk=../gwt
 appengine.sdk=../..
 EOF
 done
-rm $GAE_JAVA/gwt/build/properties
 
 # tweak tkl-webcp
 sed -i "s|width: 520px;|width: 580px;|" /var/www/css/base.css
