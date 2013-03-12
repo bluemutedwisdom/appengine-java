@@ -1,0 +1,23 @@
+#!/bin/bash -ex
+
+dl() {
+    [ "$FAB_HTTP_PROXY" ] && PROXY="--proxy $FAB_HTTP_PROXY"
+    cd $2; curl -L -f -O $PROXY $1; cd -
+}
+
+SRC=/usr/local/src
+
+# appengine sdk
+VERSION="appengine-java-sdk-1.7.5.zip"
+SHA1SUM="2475c8a50cbe1289e60441f6f011626b9fdc06d0"
+
+dl http://googleappengine.googlecode.com/files/${VERSION} $SRC
+
+echo "$SHA1SUM  $VERSION" > $SRC/$VERSION.sha1
+cd $SRC; sha1sum -c $VERSION.sha1; rm $VERSION.sha1; cd -
+
+# google web toolkit sdk
+VERSION="gwt-2.5.1.zip"
+
+dl http://google-web-toolkit.googlecode.com/files/${VERSION} $SRC
+
