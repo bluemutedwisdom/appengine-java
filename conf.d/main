@@ -9,13 +9,15 @@ update-java-alternatives -s $JVM || true
 echo JAVA_HOME=\"/usr/lib/jvm/${JVM}\" >> /etc/environment
 
 NAME=appengine-java-sdk
-unzip $SRC/$NAME-*.zip -d $SRC; rm $SRC/$NAME-*.zip
+unzip -q $SRC/$NAME-*.zip -d $SRC
+rm $SRC/$NAME-*.zip
 mv -T $SRC/$NAME-* $GAE_JAVA
 chown -R root:root $GAE_JAVA
 
 # unpack google web kit (GWT)
 NAME=gwt-*.zip
-unzip $SRC/$NAME -d $GAE_JAVA/demos; rm $SRC/$NAME
+unzip -q $SRC/$NAME -d $GAE_JAVA/demos
+rm $SRC/$NAME
 cd $GAE_JAVA/demos
 ln -s gwt-* gwt
 cd -

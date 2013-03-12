@@ -47,9 +47,8 @@
 
                     <h2>Resources and references</h2>
                     <ul>
-                        <li><a href="docs/appengine/docs/whatisgoogleappengine.html">What is Google AppEngine?</a> <a href="docs/appengine/whyappengine.html">Why should I use it?</a></li>
-                        <li><a href="docs/appengine/kb/index.html">Check out the FAQ</a>, <a href="docs/appengine/casestudies.html">case studies</a> and <a href="docs/appengine/articles/index.html">articles</a></li>
-
+                        <li><a href="https://developers.google.com/appengine/docs/whatisgoogleappengine">What is Google AppEngine?</a> <a href="https://developers.google.com/appengine/whyappengine">Why should I use it?</a></li>
+                        <li><a href="https://developers.google.com/appengine/kb/">Check out the FAQ</a>, <a href="https://cloud.google.com/customers/">case studies</a> and <a href="https://developers.google.com/appengine/articles/">articles</a></li>
                         <li><a href="http://www.turnkeylinux.org/appengine-java">TurnKey AppEngine Java release notes</a></li>
                     </ul>
 
@@ -63,8 +62,10 @@
                 <p><a href="http://www.youtube.com/watch?v=P3GT4-m_6RQ">Early Look at Java Language Support in Google AppEngine</a></p>
                 <p><a href="http://www.youtube.com/watch?v=2jW2iSKDipY">Google I/O 2009 - Java Persistence and App Engine Datastore</a></p>
                 
-                <p><b>Local documentation:</b>
-                <a href="docs/appengine/docs/java/gettingstarted/index.html">Getting started</a>, <a href="docs/appengine/docs/java/overview.html">AppEngine Java overview</a>, <a href="google_appengine/docs/javadoc/index.html">Java classes</a></p>
+                <p><b>Online documentation:</b>
+                <a href="https://developers.google.com/appengine/docs/java/gettingstarted">Getting started</a>, 
+                <a href="https://developers.google.com/appengine/docs/java/overview">AppEngine Java overview</a>,
+                <a href="https://developers.google.com/appengine/docs/java/javadoc">Java classes</a></p>
 
 <h2>Demo applications</h2>
 
