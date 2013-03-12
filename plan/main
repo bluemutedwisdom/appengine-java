@@ -1,12 +1,7 @@
 #include <turnkey/base>
+#include <turnkey/appengine>
 
 openjdk-6-jdk
 openjdk-6-jre
 ant                      /* required to build java apps */
 
-lighttpd                 /* used to power appengine documentation */
-
-postfix                  /* support appengine email */
-webmin-postfix
-
-unzip
