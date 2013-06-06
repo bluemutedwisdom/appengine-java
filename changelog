@@ -6,7 +6,7 @@ turnkey-appengine-java-12.1 (1) turnkey; urgency=low
     - Replaced offline docs with online links (no longer available).
     - Deny browsing to google_appengine apps sourcecode (security).
 
-  * Hardcoded component versions:
+  * Upstream source component versions:
 
     appengine-java-sdk      1.7.5
     gwt                     2.4.0
