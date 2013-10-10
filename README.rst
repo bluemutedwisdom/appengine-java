@@ -8,7 +8,7 @@ Google's own applications. App Engine applications are easy to build,
 easy to maintain, and easy to scale.
 
 We also have versions of the Google App Engine SDK for the `Python`_ and
-`Go programming`_ languages.
+`Go`_ programming languages.
 
 This appliance includes all the standard features in `TurnKey Core`_,
 and on top of that:
@@ -34,5 +34,5 @@ Credentials *(passwords set at first boot)*
 
 .. _Google App Engine SDK: https://developers.google.com/appengine/
 .. _Python: http://www.turnkeylinux.org/appengine-python
-.. _Go programming: http://www.turnkeylinux.org/appengine-go
+.. _Go: http://www.turnkeylinux.org/appengine-go
 .. _TurnKey Core: http://www.turnkeylinux.org/core
